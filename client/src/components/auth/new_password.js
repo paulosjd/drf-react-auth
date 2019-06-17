@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import { Formik } from 'formik';
+import { Modal, ModalHeader } from "reactstrap";
 import { passwordResetConfirm } from "../../store/actions/user";
 import { ResetConfirmSchema } from '../../schemas/auth'
 import './login.css';
-import { Modal, ModalHeader } from "reactstrap";
-import axios from "axios";
-import {userConstants} from "../../store/constants/user";
-import AuthService from "../../utils/auth_service";
 
 class NewPasswordConfirm extends Component {
 
     constructor(props){
-        console.log('new pword constructor')
         super(props);
         this.state = {
             show_register: false,
@@ -20,8 +16,6 @@ class NewPasswordConfirm extends Component {
             show_help: false,
         };
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        this.Auth = new AuthService();
-
     }
     handleFormSubmit(values){
         const body = {new_password: values.new_password, uid: this.props.match.params.uid,
@@ -85,9 +79,7 @@ class NewPasswordConfirm extends Component {
 }
 
 const mapStateToProps = state => {
-    return {
-
-    };
+    return {};
 };
 
 const mapDispatchToProps = dispatch => {

@@ -4,28 +4,26 @@ import MenuItemContent from './menu_item_content'
 
 const Summary = (props) => {
 
-    const handleCategorySelection = (value) => {
-        // this.props.setCategory(catName);
-        // this.props.topicsByCategory()
+    const handleSelection = (value) => {
         console.log(value)
     };
+
     let item;
     if (props.isLoading){
         item = <Spinner color="secondary" />
-
-
     } else if (props.summaryItems.length > 0) {
         item = props.summaryItems.map(obj => { return (
             <MenuItemContent
                 key={obj.name}
                 label={obj.name}
                 param_value={obj.value}
-                handleClick={handleCategorySelection}
+                handleClick={handleSelection}
             /> )
         })
     } else {
         item = <h2>You need to add items</h2>
     }
+
     return (
         <ListGroup>
             <ListGroupItem
@@ -34,8 +32,6 @@ const Summary = (props) => {
             </ListGroupItem>
         </ListGroup>
     )
-
-
 };
 
 export default Summary

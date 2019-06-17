@@ -3,20 +3,17 @@ import {connect} from "react-redux";
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import MenuItemContent from '../components/menu_item_content'
 
-const testItems = ['Test item 1', 'Foobar!']
+const testItems = ['Test item 1', 'Test item 2', 'Test item 3'];
 
 class MenuItems extends Component {
 
-    handleCategorySelection(value) {
-        // this.props.setCategory(catName);
-        // this.props.topicsByCategory()
+    handleSelection(value) {
         console.log(value)
     }
 
     render() {
         return (
                 <ListGroup>
-                    {/*{this.props.categories.sort().map(name => {*/}
                     {testItems.map(name => {
                         return (
                             <ListGroupItem
@@ -24,7 +21,7 @@ class MenuItems extends Component {
                                 active={name === 'Test item 1'} action>
                                 <MenuItemContent
                                     label={name}
-                                    handleClick={this.handleCategorySelection.bind(this)}
+                                    handleClick={this.handleSelection.bind(this)}
                                 />
                             </ListGroupItem>)
                     })}
@@ -35,18 +32,13 @@ class MenuItems extends Component {
 
 const mapStateToProps = state => {
     return {
-        // categories: state.categories,
-        // allTopics: state.allTopics,
 
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        // setTopic: (val) => dispatch(actionCreator.setTopic(val)),
-        // setCategory: (val) => dispatch(actionCreator.setCategory(val)),
-        // topicsByCategory: () => dispatch(actionCreator.topicsByCategory()),
-        // setPathname: () => dispatch(actionCreator.setPathname())
+
     };
 };
 

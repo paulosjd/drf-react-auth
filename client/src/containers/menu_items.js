@@ -9,13 +9,7 @@ const testItems = ['Test item 1', 'Foobar!']
 
 class MenuItems extends Component {
 
-    componentDidMount() {
-        // this.props.setPathname()
-    }
-
-    handleCategorySelection(value) {
-        // this.props.setCategory(catName);
-        // this.props.topicsByCategory()
+    handleSelection(value) {
         console.log(value)
     }
 
@@ -30,7 +24,7 @@ class MenuItems extends Component {
                                 active={name === 'Test item 1'} action>
                                 <MenuItemContent
                                     label={name}
-                                    handleClick={this.handleCategorySelection.bind(this)}
+                                    handleClick={this.handleSelection.bind(this)}
                                 />
                             </ListGroupItem>)
                     })}
@@ -42,18 +36,11 @@ class MenuItems extends Component {
 
 const mapStateToProps = state => {
     return {
-        // categories: state.categories,
-        // allTopics: state.allTopics,
-
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        // setTopic: (val) => dispatch(actionCreator.setTopic(val)),
-        // setCategory: (val) => dispatch(actionCreator.setCategory(val)),
-        // topicsByCategory: () => dispatch(actionCreator.topicsByCategory()),
-        // setPathname: () => dispatch(actionCreator.setPathname())
     };
 };
 

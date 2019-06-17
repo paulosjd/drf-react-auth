@@ -1,9 +1,3 @@
-.notusednotusednot {
-  margin: 14px;
-  padding: 14px;
-  font-family: sans-serif;
-}
-
 .navbar {
   margin-bottom: 0;
   /*justify-content: flex-end !important;*/
@@ -17,20 +11,6 @@
 
 }
 
-/*.col-9 {*/
-  /*padding-right: 0 !important;*/
-  /*padding-left: 0 !important;*/
-
-/*}*/
-
 .container {
   max-width: 100% !important;
 }
-
-.foobar{
-  display: inline-block !important;
-  float: right;
-}
-
-
-/*text-align: center;*/

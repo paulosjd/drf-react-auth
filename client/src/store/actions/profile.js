@@ -5,8 +5,6 @@ export const fetchProfileSummaryBegin = () => ({
 });
 
 export const fetchProfileSummary = (user_id) => {
-    console.log(user_id);
-    // TODO include JWT in header
     let url = `http://127.0.0.1:8000/api/profile/${user_id}/summary`;
     return dispatch => {
         fetch(url)

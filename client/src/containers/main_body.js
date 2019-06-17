@@ -3,9 +3,7 @@ import * as actionCreator from "../store/actions/profile";
 import {connect} from "react-redux";
 import { Container, Row, Col } from 'reactstrap';
 import MenuItems from './menu_items'
-import FeatItems from './feat_items'
 import Summary from '../components/summary'
-
 
 class MainBody extends Component {
 
@@ -16,10 +14,6 @@ class MainBody extends Component {
 
     render() {
         console.log(this.props.summaryItems)
-        console.log(this.props.loading)
-
-        // TODO SHOW SPINNER LOADING
-
         if ( this.props.error ) {
             console.log(this.props.error)
             return <div>ERROR!!!</div>
@@ -42,8 +36,6 @@ class MainBody extends Component {
 }
 
 const mapStateToProps = ({profile, auth}) => {
-    console.log('profile')
-    console.log(profile)
     return {
         error: profile.error,
         loading: profile.loading,
