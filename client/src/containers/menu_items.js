@@ -5,7 +5,7 @@ import { Col, ListGroup, ListGroupItem } from 'reactstrap';
 import MenuItemContent from '../components/menu_item_content'
 
 
-const testItems = ['Test item 1', 'Foobar!']
+const testItems = ['Test item 1', 'Test item 2']
 
 class MenuItems extends Component {
 

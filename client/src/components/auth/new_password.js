@@ -38,7 +38,7 @@ class NewPasswordConfirm extends Component {
                         return (
                             <div className="card">
                                 <form onSubmit={handleSubmit}>
-                                    <label htmlFor="new_password" style={{ display: 'block' }}>New password</label>
+                                    <label htmlFor="new_password"  >New password</label>
                                     <input
                                         id="new_password"
                                         placeholder="Enter a password"
@@ -52,7 +52,7 @@ class NewPasswordConfirm extends Component {
                                     {errors.new_password && touched.new_password && (
                                         <div className="auth-errors">{errors.new_password}</div>
                                     )}
-                                    <label htmlFor="new_password2" style={{ display: 'block' }}>Confirm password</label>
+                                    <label htmlFor="new_password2"  >Confirm password</label>
                                     <input
                                         id="new_password2"
                                         placeholder="Re-enter password"
