@@ -1,4 +1,4 @@
-Celery==4.3.0
+Celery==5.2.2
 Django==2.1.7
 djangorestframework_jwt==1.11.0
 PyJWT==1.7.1
